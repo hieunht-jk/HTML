@@ -1,0 +1,19 @@
+- Một số thẻ Semantic
+
+/sử dụng nhiều:
+- Senantic: dịch ra là ngữ nghĩa, là những thẻ có nội dung bên trong có ý nghĩa tương ứng với tên thẻ đó.
+- Một số thẻ Semantic:
+ + <article>: xác định nội dung đọc lập, khép kín.
+ + <aside>: xác định nội dung ngoài trang.
+ + <header>: chỉ định tiêu đề cho 1 tài liệu hoặc section.
+ + <footer>: xác định chân trang cho tài liệu hoặc section.
+ + <main>: chỉ định nội dung chính cho tài liệu 
+ + <nav>(navigation- dẫn đường): xác định các liên kết điều hướng.
+ + <section>: xác định một phần trong tài liệu.
+/ít dùng:
+ + <time>: xác định ngày, giờ.
+ + <details> xác định các chi tiết bổ sung mà người dùng có thể xem hoặc ẩn.
+ + <summary>: xác định tiêu đề hiển thị cho phần tử <details>.
+ + <figcaption>: xác định chú thích cho phần tử <figure>.
+ + <figure>: chỉ định nội dung độc lập, như hình minh họa, sơ đồ, ảnh, danh sách mã, vv.
+
