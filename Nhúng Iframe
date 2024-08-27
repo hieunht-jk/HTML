@@ -1,0 +1,11 @@
+-  Nhúng Iframe
+
+- Thẻ <iframe></iframe>: được sử dụng để hiển thị 1 trang web.
+- Cú pháp:
+ + <iframe src="url" title="mô tả trang" height="200" width="300"></iframe>.
+- Mục tiêu cho liên kết:
+ + Thuộc tính target của liên kết phải tham chiếu đến thuộc tính name của iframe.
+- Ví dụ:
+ + <iframe src="https://www.ping.com/" name="web_bing" width="1000" height="600"</iframe>.
+* Lưu ý: Một số trang như google.com không cho phép nhúng iframe, nên sẽ thấy thông báo từ chối kết nối, chỉ những trang nào cho phép nhúng vào thì ta mới được.
+
