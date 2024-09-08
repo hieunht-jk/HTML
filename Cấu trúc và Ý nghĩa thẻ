@@ -1,0 +1,26 @@
+Cấu trúc và Ý nghĩa của các Thẻ trong HTML
+
+- <!DOCTYPE html>: Khai báo kiểu tài liệu, cho trình duyệt biết rằng tài liệu này được viết bằng HTML5. Điều này giúp trình duyệt hiển thị nội dung đúng cách.
+
+- <html></html>: Thẻ chứa toàn bộ nội dung của trang HTML. Đây là phần tử cấp cao nhất trong tài liệu HTML.
+
+- <head></head>: Phần tử chứa thông tin meta, liên kết đến các tài nguyên bên ngoài, và các thẻ như <title>, <meta>, và <link>. Các thông tin trong thẻ <head> không hiển thị trực tiếp trên trang web.
+
+- <title></title>: Xác định tiêu đề của trang web. Tiêu đề này hiển thị trên thanh tiêu đề của trình duyệt hoặc tab.
+
+- <body></body>: Chứa toàn bộ nội dung hiển thị của trang web, bao gồm văn bản, hình ảnh, liên kết và các phần tử khác mà người dùng nhìn thấy.
+
++ Ví dụ về cấu trúc cơ bản của một trang HTML:
+- HTML:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiêu đề Trang</title>
+</head>
+<body>
+    <h1>Đây là tiêu đề chính</h1>
+    <p>Đây là đoạn văn bản hiển thị trên trang web.</p>
+</body>
+</html>
