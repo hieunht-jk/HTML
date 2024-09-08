@@ -1,73 +1,130 @@
-Forms (biểu mẫu)
+1. Form là gì?
+- Là một biểu mẫu HTML được sử dụng để thu thập thông tin đầu vào của người dùng. Dữ liệu từ biểu mẫu thường được gửi đến máy chủ để xử lý.
 
-- Form là gì?
- + Là một biểu mẫu HTML được sử dụng để thu thập thông tin đầu vào của người dùng, đầu vào của người dùng thường được gửi đến máy chủ để xử lý.
-- Ví dụ:
- + <form action="">
-  <label for="fullName"họ tên</label/
-   <input type="text" id="fullName" name="full_name"/>
-   <form/>
+2. Cú Pháp Cơ Bản:
+- HTML:
+<form action="url-to-process-form" method="POST">
+  <label for="fullName">Họ tên</label>
+  <input type="text" id="fullName" name="full_name"/>
+  <button type="submit">Gửi</button>
+</form>
 
-+ Form Attributes:
- - action: thuộc tính action xác định hành động sẽ được thực hiện khi biểu mẫu được gửi, giá trị là 1 đường dẫn, thông thường dữ liệu biểu mẫu được gửi đến tệp trên máy chủ khi có người dùng nhấp vào nút gửi.
- - target: thuộc tính target chỉ định nơi hiển thị pahnr hồi nhận được sau khi gửi biểu mẫu.
+3. Các Thuộc Tính của Thẻ <form>:
+- action: Xác định URL nơi dữ liệu biểu mẫu sẽ được gửi đến khi người dùng nhấn nút gửi.
+- HTML:
+<form action="process_form.php">
+- method: Chỉ định phương thức HTTP được sử dụng để gửi dữ liệu biểu mẫu. Có hai phương thức chính:
+ + GET: Dữ liệu được nối vào URL, không an toàn cho dữ liệu nhạy cảm và có giới hạn về kích thước URL.
+- HTML:
+<form method="GET">
+ + POST: Dữ liệu không hiển thị trong URL, không có giới hạn kích thước và phù hợp cho dữ liệu nhạy cảm.
+- HTML:
+<form method="POST">
+- target: Chỉ định nơi hiển thị phản hồi sau khi gửi biểu mẫu.
+ + _self (mặc định): Mở liên kết trong cùng một khung.
+ + _blank: Mở liên kết trong một cửa sổ hoặc tab mới.
+ + _parent: Mở liên kết trong khung chứa biểu mẫu.
+ + _top: Mở liên kết trong toàn bộ cửa sổ.
+- autocomplete: Khi bật, trình duyệt sẽ gợi ý các giá trị dựa trên thông tin đã nhập trước đó.
+- HTML:
+<form autocomplete="on">
+- novalidate: Bỏ qua kiểm tra tính hợp lệ của dữ liệu khi gửi biểu mẫu.
+- HTML:
+<form novalidate>
 
-+ method: thuộc tính method chỉ định giao thức HTTP sẽ được sử dụng khi gửi dữ liệu biểu mẫu.
-+ Có 2 phương thức là GET và POST.
- - Phương thức GET:
-  - Nối dữ liệu biểu mẫu vào URL, theo cặp name/value.
-  - Không bao giờ sử dụng GET để gửi dữ liệu bảo mật . như tài khoản, mật khẩu.
-  - Độ dài của URL bị giới hạn (2048 ký tự).
- - Phương thức POST:
-  - Dữ liệu biểu mấu đã gửi không được hiển thị trong URL.
-  - POST không có giới hạn về kích thước và vó thể được sử dụng để gửi 1 lượng lớn dữ liệu.
+4. Các Thẻ Đầu Vào (Input Fields):
+- <input>: Có thể hiển thị theo nhiều kiểu khác nhau tùy thuộc vào thuộc tính type.
+- HTML:
+<input type="text" id="name" name="name">
 
-+ autocomplete: khi bật tindh năng tự động điền, trình sẽ tự động gợi ý các giá trị dựa trên các giá trị mà người dùng đã nhập trước đó.
-+ novalidate: thuộc tính này đặc tả dữ liệu form không cần phải kiểm tra tính chính xác dữ liệu khi gửi đi. vd email không cần nhập đúng định dạng vẫn gửi được.
+5. Các Loại Input:
 
-+ <input> 
- - Có thể được hiển thị theo nhiều cách, tùy thuộc vào type.
- - Mặc định type="text"
-+ <label
- - Phần tử label xác định nhãn cho 1 số element trong biểu mẫu. để người dùng hiểu hơn về element đó.
- - Thuộc tính for của thẻ label phải bằng thuộc tính id của phần tử input để liên kết chúng lại với nhau. khi đó click vào label thì con trỏ sẽ tự động focus vào ô input đó (mở rộng ra có thể áp dụng cho 1 số kiểu element khác, không chỉ áp dụng cho input).
+- text: Nhập văn bản.
+ - html:
+<input type="text">
+- email: Nhập địa chỉ email.
+ - html:
+<input type="email">
+- password: Nhập mật khẩu (ẩn).
+ - html:
+<input type="password">
+- number: Nhập số, không cho phép nhập ký tự chữ.
+ - html:
+<input type="number">
+- date: Chọn ngày tháng năm.
+ - html:
+<input type="date">
+- file: Tải tệp lên.
+ - html:
+<input type="file">
+- checkbox: Cho phép chọn một hoặc nhiều tùy chọn.
+ - html:
+<input type="checkbox">
+- radio: Cho phép chọn một tùy chọn duy nhất từ nhóm.
+ - html:
+<input type="radio">
+- range: Tạo thanh trượt giá trị.
+ - html:
+<input type="range" min="0" max="100">
+- color: Chọn màu.
+ - html:
+<input type="color">
 
-+ select
- - Hiển thị dạng danh sách thả xuống (dropdown).
- - Các thẻ  option xác định một tùy chọn có thể được chọn. theo mặc định, mục tiêu đầu tiên trong danh sách thả xuống sẽ được chọn. để thay đổi mặc định lựa chọn thì thêm thuộc tính "selected" vào <option> muốn chọn mặc định.
- - Sử dụng thuộc tính size để chỉ định số lượng giá trị hiển thị.
- - sử dụng thuộc tính "multiple" để cho phép người dùng chọn nhiều giá trị.
+6. Các Thuộc Tính của Thẻ <input>:
 
-+ textarea 
- - thẻ textarea xác định trường nhập dữ liệu nhiều dòng.
- - thuộc tính rows chỉ định số dòng hiển thị của vùng văn bản.
+- value: Giá trị ban đầu của trường đầu vào.
+ - html:
+<input type="text" value="Default text">
+- readonly: Trường đầu vào chỉ đọc, giá trị vẫn được gửi đi khi biểu mẫu được gửi.
+ - html:
+<input type="text" readonly>
+- disabled: Trường đầu vào bị vô hiệu hóa, giá trị không được gửi đi khi biểu mẫu được gửi.
+ - html:
+<input type="text" disabled>
+- maxlength: Giới hạn số ký tự tối đa cho trường đầu vào.
+ - html:
+<input type="text" maxlength="10">
+- min và max: Xác định giá trị tối thiểu và tối đa cho trường đầu vào.
+ - html:
+<input type="number" min="1" max="10">
+- multiple: Cho phép chọn nhiều giá trị (áp dụng cho <select> và <input type="file">).
+ - html:
+<select multiple>
+  <option value="1">Option 1</option>
+  <option value="2">Option 2</option>
+</select>
+- placeholder: Cung cấp gợi ý cho người dùng về giá trị dự kiến của trường đầu vào.
+ - html:
+<input type="text" placeholder="Enter text">
+- required: Xác định rằng trường đầu vào phải được điền trước khi gửi biểu mẫu.
+ - html:
+<input type="text" required>
 
-+ button
- - Thẻ button xác định nút có thể nhấp.
+7. Các Thẻ Khác:
 
-+ Input types (các kiểu input)
- - <input tyoe="text": dùng để nhập text.
- - <input tyoe="email": dùng để nhập email.
- - <input tyoe="password": dùng để nhập mật khẩu.
- - <input tyoe="number": dùng để nhập số, không nhập được chữ cái.
- - <input tyoe="date": dùng để chọn ngày tháng năm.
- - <input tyoe="datetime-local": dùng để chọn: năm tháng ngày giờ phút giây.
- - <input tyoe="file": dùng để tải file lên.
- - <input tyoe="checkbox": các hộp kiểm cho phép người dùng chọn KHÔNG hoặc NHIỀU tùy chọn trong số các lựa chọn hạn chế.
- - <input tyoe="radio": các nút cho phép người dùng chỉ chọn một trong số các lựa chọn.
- - <input tyoe="range": tạo thanh trượt giá trị. phạm vi mặc định từ 0->100. step mặc định là 1.
- - <input tyoe="color": dùng để chọn màu sắc.
+- <label>: Xác định nhãn cho các phần tử đầu vào. Thuộc tính for của thẻ <label> phải khớp với thuộc tính id của phần tử <input>.
+ - html:
+<label for="email">Email:</label>
+<input type="email" id="email" name="email">
+- <select>: Hiển thị danh sách thả xuống. Sử dụng thuộc tính multiple để cho phép chọn nhiều giá trị.
+ - html:
+<select>
+  <option value="option1">Option 1</option>
+  <option value="option2" selected>Option 2</option>
+</select>
+- <textarea>: Xác định trường văn bản nhiều dòng.
+ - html:
+<textarea rows="4" cols="50"></textarea>
+- <button>: Xác định nút có thể nhấp.
+ - html:
+<button type="submit">Submit</button>
 
-+ Input Attributes (các thuộc tính của thẻ input).
- - value: chỉ giá trị ban đầu cho trường đầu vào.
- - readonly:
-  + Thuộc tính readonly xác định rằng trường đầu vào là chỉ đọc.
-  + Giá trị của trường readonly sẽ được gửi biểu mẫu.
- - disabled:
-  + Thuộc tính disabled chỉ định rằng 1 trường đầu vào sẽ bị vô hiệu hóa.
-  + Giá trị của trường disabled sẽ không được gửi biểu mẫu.
- - maxlength: chỉ định số lượng ký tự tối đa được phép trong 1 môi trường đầu vào.
- - max và min: chỉ định các giá trị tối thiểu và tối đa cho 1 trường đầu vào.
- - multiple: xác định rằng người dùng được phép nhập nhiều hơn 1 giá trị áp dụng cho kiểu select.
- - placeholder: chỉ định 1 gợi ý ngắn để mô tả giá trị dự kiến.
- - required: xác định rằng trường đầu vào phải được điền trước khi gửi biểu mẫu.
+
+
+
+
+
+
+
+
+
