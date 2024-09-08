@@ -1,6 +1,15 @@
-- Khái niệm:
+Khái Niệm về HTML
+- HTML: Viết tắt của Hyper Text Markup Language.
+ + Ngôn ngữ đánh dấu siêu văn bản: HTML được sử dụng để định dạng và cấu trúc nội dung trên web bằng cách sử dụng các thẻ đánh dấu.
+- HTML không phải là ngôn ngữ lập trình: HTML không thực hiện các phép toán hay logic như các ngôn ngữ lập trình (ví dụ: JavaScript, Python). Thay vào đó, nó định nghĩa cấu trúc và định dạng của nội dung trên một trang web.
+- Tác dụng của HTML:
+ + Tạo bố cục: HTML giúp xác định cách các phần tử khác nhau (như văn bản, hình ảnh, video) được sắp xếp trên trang.
+ + Định dạng trang web: HTML xác định các yếu tố cơ bản của trang web như tiêu đề, đoạn văn, danh sách, liên kết và nhiều thành phần khác, cho phép trình duyệt hiển thị chúng đúng cách.
+- HTML là nền tảng cơ bản của phát triển web và được sử dụng kết hợp với CSS (Cascading Style Sheets) để định dạng và JavaScript để tạo tính tương tác.
 
-+ HTML là viết tắt của Hyper Text Markup Language.
-+ Là ngôn ngữ đánh dấu siêu văn bản.
-+ Không phải là ngôn ngữ lập trình.
-+ HTML có tác dụng tạo bố cục và định dạng trang web.
+
+
+
+
+
+
